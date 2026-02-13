@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day, Cheesecake! 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #4a4a4a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeInDown 1s ease-in;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hearts-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .heart {
+            color: #ff4d4d;
+            font-size: 40px;
+            animation: beat 1.2s infinite;
+        }
+
+        .heart:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .heart:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 1.2s ease-in;
+        }
+
+        .subtitle {
+            color: #ffe4e9;
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            animation: fadeInUp 1.4s ease-in;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery {
+            max-width: 700px;
+            padding: 20px;
+            width: 100%;
+            animation: fadeIn 1.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .photo-card {
+            background: white;
+            padding: 18px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            transform: rotate(-3deg) translateY(0);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .photo-card::before {
+            content: '💕';
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 60px;
+            opacity: 0.1;
+        }
+
+        .photo-card:nth-child(even) {
+            transform: rotate(3deg) translateY(0);
+        }
+
+        .photo-card:hover {
+            transform: rotate(0deg) scale(1.02) translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .caption {
+            text-align: center;
+            margin-top: 18px;
+            font-style: italic;
+            color: #d63384;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .separator {
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            margin: 40px 0;
+            font-size: 1.5rem;
+        }
+
+        .love-message {
+            background: rgba(255,255,255,0.95);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            animation: fadeInUp 1.8s ease-in;
+            max-width: 600px;
+        }
+
+        .love-message h2 {
+            color: #d63384;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .love-message p {
+            color: #4a4a4a;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            padding: 30px;
+            text-align: center;
+            font-size: 1.4rem;
+            color: #ffe4e9;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            animation: fadeInUp 2s ease-in;
+        }
+
+        .footer-heart {
+            display: inline-block;
+            animation: beat 1.2s infinite;
+            margin: 0 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .heart {
+                font-size: 30px;
+            }
+
+            .gallery {
+                padding: 10px;
+            }
+
+            .photo-card {
+                padding: 12px;
+                margin-bottom: 25px;
+            }
+        }
+
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hearts-container">
+            <div class="heart">❤️</div>
+            <div class="heart">💕</div>
+            <div class="heart">🌹</div>
+        </div>
+        <h1>Happy Valentine's Day, Cheesecake! 💗</h1>
+        <p class="subtitle">To the sweetest person in my life...</p>
+    </header>
+
+    <div class="love-message">
+        <h2>A Little Message</h2>
+        <p>Every day with you feels like a celebration. You bring joy, laughter, and love into my life in ways I never knew possible.</p>
+        <p>Thank you for being my favorite person in the world. 💖</p>
+    </div>
+
+    <div class="gallery">
+        <div class="separator">✨ Our Favorite Moments ✨</div>
+
+        <div class="photo-card">
+            <img src="https://i.postimg.cc/YvWpF04d/Screenshot-2026-02-13-21-36-49-082-com-instagram-android.jpg" alt="Birthday Memory">
+            <p class="caption">💕 "Happy Birthday my Cheesecake!" 💕</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="https://i.postimg.cc/21ZzWyq9/Screenshot-2026-02-13-21-37-18-210-com-instagram-android.jpg" alt="Candid Moment">
+            <p class="caption">Every moment with you is a favorite 💫</p>
+        </div>
+
+        <div class="photo-card">
+            <img src="https://i.postimg.cc/pV18n7wv/Screenshot_2026_02_13_21_36_41_367_com_instagram_android.jpg" alt="Sweet Smile">
+            <p class="caption">"Shut da, it's cute" 😊</p>
+        </div>
+    </div>
+
+    <footer>
+        <span class="footer-heart">I love you</span>
+        <span class="footer-heart">more than</span>
+        <span class="footer-heart">words can say!</span>
+        <br><br>
+        🌹 Forever yours 🌹
+    </footer>
+
+</body>
+</html>
